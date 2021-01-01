@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Pong
+        </title>
+        <style>
+            canvas {
+                border: 1px dotted black;
+                margin: 10px 10px 10px 10px;
+                /*alignment*/
+            }
+        </style>
+        <script>
+            var c = document.getElementById("canvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("invaders_background");
+            ctx.drawImage(img, 0, 0);
+        </script>
+    </head>
+    <body>
+        <canvas id="main_canvas" width="480" height="640"></canvas>
+
+        <!---------------------------- Assets ---------------------------->
+        <img id="game_background" src="MyGame/assets/images/invaders_background.png" 
+                                                            style="display:inline-block;"/>
+
+        <img id="invaders_sprite_sheet" src="MyGame/assets/images/invaders_background.png" 
+                                                            style="display:none;"/>
+
+        <!---------------------------- Engine ---------------------------->
+
+        <!-- JS files are included in the order of dependency -->
+        
+
+        <!-------------------------- Game-specific -------------------------->
+
+        <!-- JS files are included in the order of dependency -->
+        <script src="MyGame/js/Constants/GameConstants.js"> </script>
+        <script src="MyGame/js/Controllers/PlayerMoveController.js"> </script>       
+        <script src="MyGame/js/game.js"> </script>
+    </body>
+</html>
